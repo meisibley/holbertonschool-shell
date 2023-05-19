@@ -3,5 +3,5 @@
 inputline="/ete/passwd"
 while IFS= read -r line
 do
-	echo "$line" | tr ":" " " | echo "$line"
+	echo "$line"
 done < "$inputline"
