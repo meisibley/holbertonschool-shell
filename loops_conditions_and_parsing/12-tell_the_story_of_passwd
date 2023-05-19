@@ -3,5 +3,5 @@
 inputline="/etc/passwd"
 while IFS= read -r line
 do
-	tr ":" " " | echo "$line"
+	echo "$line"
 done < $inputline
