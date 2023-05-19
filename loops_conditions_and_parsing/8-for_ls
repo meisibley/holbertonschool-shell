@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 #Display the content of the current directory without number and first dash parts
-for filename in $(ls)
+for filename in *
 do
-	grep -i "^[[:alpha:]]" $filename | echo
+	grep -i "^[[:alpha:]]" "$filename" | echo
 done
