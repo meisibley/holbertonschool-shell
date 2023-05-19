@@ -2,5 +2,6 @@
 #Display the content of the current directory without number and first dash parts
 for fname in "{ls}"
 do
-	grep -i "^[[:alpha:]]" "$fname" > echo
+	grep -i "^[[:alpha:]]" "$fname" > fname2
+	echo $fname2
 done
