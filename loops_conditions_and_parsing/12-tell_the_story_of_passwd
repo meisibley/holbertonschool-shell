@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 #Display the content of the file /etc/passwd, using the while loop + IFS
-inputline="/ete/passwd"
+inputline="/etc/passwd"
 while IFS= read -r line
 do
-	echo "$line"
+	tr ":" " " | echo "$line"
 done < "$inputline"
