@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+#While loop 10 times, 4th is bad, 8th is good, rest is "Best School"
+i=1
+while [ $i -le 10 ]
+do
+	if [ $i=4 ]
+	then
+		echo "bad luck"
+	elif [ $i=8 ]
+	then
+		echo "good luck"
+	else
+		echo "Best School"
+	fi
+done
