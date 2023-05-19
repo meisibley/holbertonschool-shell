@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 #Display the content of the current directory without number and first dash parts
-for fname in "{ls}"
+for fname in *
 do
-	grep -i ^[[:alpha:]] $fname
+	nameWithoutNum=${fname#*-}
+	echo "${nameWithoutNum}"
 done
