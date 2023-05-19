@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 #Use while loop and case statement to display numbers from 1 to 20, and at 4th also display "bad luck from China"; at 9th also display "bad luck from Japan"; and at 17th also display "bad luck from Italy.
 i=1
-while [ $i -le 20]
+while [ $i -le 20 ]
 do
 	case $i in
 		4) echo "4"
