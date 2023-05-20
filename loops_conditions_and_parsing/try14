@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+x="130.0.236.153 200"
+echo $x
