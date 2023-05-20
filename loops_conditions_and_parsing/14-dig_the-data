@@ -1,10 +1,5 @@
 #!/usr/bin/env bash
 #Write a Baxh script that groups visitors by IP and HTTP status code, and displays this data.
-#ipcode1="81"
-#ipcode2="65"
-#ipcode3="217"
-#ipcode4="35"
-#ipcode5="200"
 awk -F '.' '{ipcode1=$(( $1 )); ipcode2=$(( $2 )); ipcode3=$(( $3 )); ipcode4=$(( $4 )); ipcode5=$(( $5 )); countnum=0
 awk -F '.' '{if($1==$ipcode1){if($2==$ipcode2){if($3==$ipcode3){if($4==$ipcode4){if($5==$ipcode5){countnum=$(( countnum+1 ))}}}}}}' apache-access.log\ file
-print $countnum" "$ipcode1"."$ipcode2"."$ipcode3"."$ipcode4" "$ipcode5}' apache-access.log\ file
+print $countnum" "$ipcode1"."$ipcode2"."$ipcode3"."$ipcode4" "$ipcode5}' apache-access.log
