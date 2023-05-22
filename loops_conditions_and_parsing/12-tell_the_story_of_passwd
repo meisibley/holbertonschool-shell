@@ -11,5 +11,5 @@ do
 	lplace=$(echo "$fline" | cut -d: -f 3)
 	lpscod=$(echo "$fline" | cut -d: -f 2)
 	lmoinfo=$(echo "fline" | cut -d: -f 5)
-	echo "The user $luser is part of the $lgang gang, lives in $ldir and rides $lrides. $lplace\'s place is protected by the passcode $lpscod, more info about the user here: $lmoinfo"
+	echo "The user $luser is part of the $lgang gang, lives in $ldir and rides $lrides. $lplace's place is protected by the passcode $lpscod, more info about the user here: $lmoinfo"
 done < $fcontent
