@@ -4,8 +4,8 @@ fcontent="/etc/passwd"
 #lpscod="x"
 while IFS= read -r fline
 do
-	luser=$(echo "$fline" | cut -d\: -f 1)
-	lgang=$(echo "$fline" | cut -d\: -f 4)
+	luser=$(echo "$fline" | cut -d: -f 1)
+	lgang=$(echo "$fline" | cut -d: -f 4)
 	ldir=$(echo "$fline" | cut -d: -f 6)
 	lrides=$(echo "$fline" | cut -d: -f 7)
 	lplace=$(echo "$fline" | cut -d: -f 3)
