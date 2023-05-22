@@ -4,12 +4,12 @@ fcontent="/etc/passwd"
 #lpscod="x"
 while IFS= read -r fline
 do
-	luser=$(cut -d: -f 1 "$fline")
-	lgang=$(cut -d: -f 4 "$fline")
-	ldir=$(cut -d: -f 6 "$fline")
-	lrides=$(cut -d: -f 7 "$fline")
-	lplace=$(cut -d: -f 3 "$fline")
-	lpscod=$(cut -d: -f 2 "$fline")
-	lmoinfo=$(cut -d: -f 5 "$fline")
+	luser=$(echo "$fline" | cut -d\: -f 1)
+	lgang=$(echo "$fline" | cut -d\: -f 4)
+	ldir=$(echo "$fline" | cut -d: -f 6)
+	lrides=$(echo "$fline" | cut -d: -f 7)
+	lplace=$(echo "$fline" | cut -d: -f 3)
+	lpscod=$(echo "$fline" | cut -d: -f 2)
+	lmoinfo=$(echo "fline" | cut -d: -f 5)
 	echo "The user $luser is part of the $lgang gang, lives in $ldir and rides $lrides. $lplace\'s place is protected by the passcode $lpscod, more info about the user here: $lmoinfo"
 done < $fcontent
