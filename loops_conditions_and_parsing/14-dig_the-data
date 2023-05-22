@@ -4,4 +4,4 @@
 #awk -F '.' '{if($1==$ipcode1){if($2==$ipcode2){if($3==$ipcode3){if($4==$ipcode4){if($9==$ipcode5){countnum=$(( countnum+1 ))}}}}}}' apache-access.log
 #print $countnum" "$ipcode1"."$ipcode2"."$ipcode3"."$ipcode4" "$ipcode5}' apache-access.log
 
-awk '{printf $1 " " $9}' apache-access.log | sort | uniq -c | sort -rn
+awk '{printf $1 " " $9}' apache-access.log\ file | sort | uniq -c | sort -rn
