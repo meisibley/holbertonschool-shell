@@ -1,21 +1,15 @@
 #!/usr/bin/env bash
 #Write a Bash script that displays the content of the file /etc/passwd, using the while loop + IFS.
-#fcontent="/etc/passwd"
-#luser="root"
-#lgang="0"
-#ldir="root"
-#lrides="/bin/bash"
-#lplace="0"
+fcontent="/etc/passwd"
 #lpscod="x"
-#lmoinfo="root"
 while IFS= read -r fline
 do
-	cut -d: -f 1 "$fline" > "$luser"
-	cut -d: -f 4 "$fline" > "$lgang"
-	cut -d: -f 6 "$fline" > "$ldir"
-	cut -d: -f 7 "$fline" > "$lrides"
-	cut -d: -f 3 "$fline" > "$lplace"
-	cut -d: -f 2 "$fline" > "$lpscod"
-	cut -d: -f 5 "$fline" > "$lmoinfo"
-	cat "The user $luser is part of the $lgang gang, lives in $ldir and rides $lrides. $lplace\'s place is protected by the passcode $lpscod, more info about the user here: $lmoinfo"
+	luser=$(cut -d: -f 1 "$fline")
+	lgang=$(cut -d: -f 4 "$fline")
+	ldir=$(cut -d: -f 6 "$fline")
+	lrides=$(cut -d: -f 7 "$fline")
+	lplace=$(cut -d: -f 3 "$fline")
+	lpscod=$(cut -d: -f 2 "$fline")
+	lmoinfo=$(cut -d: -f 5 "$fline")
+	echo "The user $luser is part of the $lgang gang, lives in $ldir and rides $lrides. $lplace\'s place is protected by the passcode $lpscod, more info about the user here: $lmoinfo"
 done < $fcontent
